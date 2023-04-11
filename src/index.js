@@ -4,7 +4,7 @@ const handlebars = require('express-handlebars');
 const router=require('./routs');
 
 app.use('/static', express.static('public'));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));//допълнителен мидъвер от експрес, декодира данните в бодито, които праща браузъра при заявка
 
 app.engine('hbs', handlebars.engine({
     extname: 'hbs'
